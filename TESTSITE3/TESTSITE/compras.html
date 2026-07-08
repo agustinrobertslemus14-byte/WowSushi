@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compras | WOW Sushi</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Volver al inicio">
+          <img src="images/logo.png" alt="Logo WOW Sushi" />
+        </a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <ul>
+            <li><a href="index.html" class="nav-link nav-item"><span>Volver al inicio</span></a></li>
+            <li><a href="index.html#menu" class="nav-link nav-item"><span>Menú</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="purchase-shell">
+        <article class="purchase-card purchase-highlight">
+          <p class="purchase-label">Tu selección</p>
+          <h1 id="purchase-title">Plato especial</h1>
+          <p id="purchase-description">Elige un producto desde el menú para ver su detalle.</p>
+          <div class="purchase-price" id="purchase-price">$0</div>
+          <a href="index.html#menu" class="btn purchase-cta">Volver al menú</a>
+        </article>
+
+        <aside class="purchase-card" aria-label="Resumen de compra">
+          <h2>Resumen de compra</h2>
+          <ul class="purchase-list">
+            <li><span>Producto</span><strong id="purchase-item-name">-</strong></li>
+            <li><span>Precio</span><strong id="purchase-item-price">$0</strong></li>
+            <li><span>Envío</span><strong>Gratis</strong></li>
+          </ul>
+          <div class="purchase-total">
+            <span>Total</span>
+            <strong id="purchase-total">$0</strong>
+          </div>
+          <button type="button" class="menu-action purchase-button">Confirmar pedido</button>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <h3>Tu pedido en pocas horas</h3>
+          <p>Disfruta de tus platos favoritos con la misma calidad y estilo del sitio.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const products = {
+        'sushi-clasico': {
+          title: 'Sushi clásico',
+          description: 'Delicado, fresco y con una combinación de sabores equilibrada.',
+          price: 6990,
+          image: 'images/SushiTab.jpg'
+        },
+        'sushi-premium': {
+          title: 'Sushi premium',
+          description: 'Textura suave y presentación elegante para una experiencia especial.',
+          price: 8990,
+          image: 'images/SushiPremium.jpeg'
+        },
+        'sushi-tempura': {
+          title: 'Sushi tempura',
+          description: 'Crujiente por fuera y jugoso por dentro, ideal para compartir.',
+          price: 7990,
+          image: 'images/Tempura.jpg'
+        },
+        'handroll-atun': {
+          title: 'Handroll de atún',
+          description: 'Relleno de atún fresco con un toque de sésamo y mayonesa japonesa.',
+          price: 4500,
+          image: 'images/Handroll1.jpeg'
+        },
+        'handroll-california': {
+          title: 'Handroll de california',
+          description: 'Una opción suave y cremosa para los amantes del sabor clásico.',
+          price: 6500,
+          image: 'images/California.jpg'
+        },
+        'handroll-camaron': {
+          title: 'Handroll de camarón',
+          description: 'Una combinación crocante y delicada con salsa especial.',
+          price: 5500,
+          image: 'images/Camaron.webp'
+        },
+        'onigiri-salmon': {
+          title: 'Onigiri de salmón',
+          description: 'Arroz con forma de bola relleno de salmón ahumado y salsa ligera.',
+          price: 3990,
+          image: 'images/Salmon.jpg'
+        },
+        'onigiri-atun': {
+          title: 'Onigiri de atún',
+          description: 'Una opción práctica y muy sabrosa para llevar o compartir.',
+          price: 4990,
+          image: 'images/atun-onigiri.jpg'
+        },
+        'onigiri-algas': {
+          title: 'Onigiri de algas',
+          description: 'Casero, aromático y con un sabor fresco y muy japonés.',
+          price: 2990,
+          image: 'images/algas.jpg'
+        }
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const key = params.get('producto') || 'sushi-clasico';
+      const product = products[key] || products['sushi-clasico'];
+      const formatPrice = (price) => `$${price.toLocaleString('es-CL')}`;
+
+      document.getElementById('purchase-title').textContent = product.title;
+      document.getElementById('purchase-description').textContent = product.description;
+      document.getElementById('purchase-price').textContent = formatPrice(product.price);
+      document.getElementById('purchase-item-name').textContent = product.title;
+      document.getElementById('purchase-item-price').textContent = formatPrice(product.price);
+      document.getElementById('purchase-total').textContent = formatPrice(product.price);
+
+      const highlight = document.querySelector('.purchase-highlight');
+      if (highlight) {
+        highlight.style.backgroundImage = `linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,241,249,0.95)), url('${product.image}')`;
+      }
+    </script>
+  </body>
+</html>

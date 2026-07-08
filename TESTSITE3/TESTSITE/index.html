@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio | Mi sitio web</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo" aria-label="Logo del sitio">
+          <img src="images/logo.png" alt="Logo WOW Sushi" />
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <ul>
+            <li><a href="delivery.html" class="nav-link nav-item"><img src="images/Iconsweb-PNG_ICONO WEB - DELIVERY.png" alt="" /><span>Delivery</span></a></li>
+            <li><a href="#menu" class="nav-link nav-item"><img src="images/Iconsweb-PNG_ICONO WEB - MENU.png" alt="" /><span>Menú</span></a></li>
+            <li><a href="promociones.html" class="nav-link nav-item"><img src="images/Iconsweb-PNG_ICONO WEB - PROMOCION.png" alt="" /><span>promociones</span></a></li>
+            <li><button type="button" class="nav-item"><img src="images/Iconsweb-PNG_ICONO WEB - CARRITO DE COMPRAS.png" alt="" /><span>carrito de compras</span></button></li>
+            <li><a href="contacto.html" class="nav-link nav-item"><img src="images/Iconsweb-PNG_ICONO WEB - CONTACTO.png" alt="" /><span>contacto</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="principal">
+        <div class="slider" aria-label="Slider de imágenes">
+          <div class="slide active">
+            <img src="images/Escritorio.jpg" alt="Imagen 1" />
+            <div class="slide-caption">Promoción 1</div>
+          </div>
+          <div class="slide">
+            <img src="images/SushiPremium.jpeg" alt="Imagen 2" width="1920" height="1080" />
+            <div class="slide-caption">Promoción 2</div>
+          </div>
+          <div class="slide">
+            <img src="images/atun-onigiri.jpg" alt="Imagen 3" width="1920" height="1080" />
+            <div class="slide-caption">Promoción 3</div>
+          </div>
+          <div class="slider-controls">
+            <button type="button" data-slide="0" class="active">1</button>
+            <button type="button" data-slide="1">2</button>
+            <button type="button" data-slide="2">3</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <div class="section-heading">
+          <h2>Menú</h2>
+          <p>Explora nuestros platos más pedidos y elige tu favorito.</p>
+        </div>
+
+        <div class="menu-tabs" role="tablist" aria-label="Categorías del menú">
+          <button type="button" class="menu-tab active" data-tab="sushi" role="tab" aria-selected="true">Sushi</button>
+          <button type="button" class="menu-tab" data-tab="handroll" role="tab" aria-selected="false">Handroll</button>
+          <button type="button" class="menu-tab" data-tab="onigiri" role="tab" aria-selected="false">Onigiri</button>
+        </div>
+
+        <div class="menu-panels">
+          <div class="menu-panel active" data-panel="sushi">
+            <div class="menu-grid">
+              <article class="menu-card">
+                <img src="images/SushiTab.jpg" alt="Sushi clásico" />
+                <h3>Sushi clásico</h3>
+                <p>Delicado, fresco y con una combinación de sabores equilibrada.</p>
+                <a href="compras.html?producto=sushi-clasico" class="menu-action" data-target="sushi-clasico">$6990</a>
+              </article>
+              <article class="menu-card">
+                <img src="images/SushiPremium.jpeg" alt="Sushi premium" />
+                <h3>Sushi premium</h3>
+                <p>Textura suave y presentación elegante para una experiencia especial.</p>
+                <a href="compras.html?producto=sushi-premium" class="menu-action" data-target="sushi-premium">$8990</a>
+              </article>
+              <article class="menu-card">
+                <img src="images/Tempura.jpg" alt="Sushi tempura" />
+                <h3>Sushi tempura</h3>
+                <p>Crujiente por fuera y jugoso por dentro, ideal para compartir.</p>
+                <a href="compras.html?producto=sushi-tempura" class="menu-action" data-target="sushi-tempura">$7990</a>
+              </article>
+            </div>
+          </div>
+
+          <div class="menu-panel" data-panel="handroll">
+            <div class="menu-grid">
+              <article class="menu-card">
+                <img src="images/Handroll1.jpeg" alt="Handroll de atún" />
+                <h3>Handroll de atún</h3>
+                <p>Relleno de atún fresco con un toque de sésamo y mayonesa japonesa.</p>
+                <a href="compras.html?producto=handroll-atun" class="menu-action" data-target="handroll-atun">$4500</a>
+              </article>
+              <article class="menu-card">
+                <img src="images/California.jpg" alt="Handroll de california" />
+                <h3>Handroll de california</h3>
+                <p>Una opción suave y cremosa para los amantes del sabor clásico.</p>
+                <a href="compras.html?producto=handroll-california" class="menu-action" data-target="handroll-california">$6500</a>
+              </article>
+              <article class="menu-card">
+                <img src="images/Camaron.webp" alt="Handroll de camarón" />
+                <h3>Handroll de camarón</h3>
+                <p>Una combinación crocante y delicada con salsa especial.</p>
+                <a href="compras.html?producto=handroll-camaron" class="menu-action" data-target="handroll-camaron">$5500</a>
+              </article>
+            </div>
+          </div>
+
+          <div class="menu-panel" data-panel="onigiri">
+            <div class="menu-grid">
+              <article class="menu-card">
+                <img src="images/Salmon.jpg" alt="Onigiri de salmón" />
+                <h3>Onigiri de salmón</h3>
+                <p>Arroz con forma de bola relleno de salmón ahumado y salsa ligera.</p>
+                <a href="compras.html?producto=onigiri-salmon" class="menu-action" data-target="onigiri-salmon">$3990</a>
+              </article>
+              <article class="menu-card">
+                <img src="images/atun-onigiri.jpg" alt="Onigiri de atún" />
+                <h3>Onigiri de atún</h3>
+                <p>Una opción práctica y muy sabrosa para llevar o compartir.</p>
+                <a href="compras.html?producto=onigiri-atun" class="menu-action" data-target="onigiri-atun">$4990</a>
+              </article>
+              <article class="menu-card">
+                <img src="images/algas.jpg" alt="Onigiri de algas" />
+                <h3>Onigiri de algas</h3>
+                <p>Casero, aromático y con un sabor fresco y muy japonés.</p>
+                <a href="compras.html?producto=onigiri-algas" class="menu-action" data-target="onigiri-algas">$2990</a>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-preview" id="menu-preview" aria-live="polite">
+          Selecciona un plato para ver la imagen destacada.
+        </div>
+      </section>
+
+      <section class="locales" id="locales">
+        <div class="section-heading">
+          <h2>Locales</h2>
+          <p>Selecciona una región para ver su punto destacado en el mapa.</p>
+        </div>
+
+        <div class="locales-grid">
+          <div class="map-card" aria-label="Mapa dinámico de Chile">
+            <div class="map-base">
+              <img src="images/mapa.png" alt="Mapa de Chile con puntos destacados" />
+              <div class="map-point point-antofagasta" data-region="Antofagasta">A</div>
+              <div class="map-point point-iquique" data-region="Iquique">I</div>
+              <div class="map-point point-santiago" data-region="Santiago">S</div>
+              <div class="map-point point-valdivia" data-region="Valdivia">V</div>
+              <div class="map-point point-arica" data-region="Arica">R</div>
+              <div class="map-point point-la-serena" data-region="La Serena">L</div>
+              <div class="map-point point-temuco" data-region="Temuco">T</div>
+              <div class="map-point point-concepcion" data-region="Concepción">C</div>
+              <div class="map-point point-valparaiso" data-region="Valparaíso">P</div>
+              <div class="map-point point-talca" data-region="Talca">A</div>
+              <div class="map-point point-puerto-montt" data-region="Puerto Montt">M</div>
+              <div class="map-point point-rancagua" data-region="Rancagua">R</div>
+            </div>
+            <a href="https://www.google.com/maps/place/Chile/@-35.1341394,-109.4656812,4z/data=!3m1!4b1!4m6!3m5!1s0x9662c5410425af2f:0x505e1131102b91d!8m2!3d-35.675147!4d-71.542969!16zL20vMDFwMXY?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="map-google-link">Ver en Google Maps</a>
+          </div>
+
+          <aside class="regions-column" aria-label="Regiones de Chile">
+            <h3>Regiones</h3>
+            <ul>
+              <li><button type="button" class="region-button active" data-region="Antofagasta">Antofagasta</button></li>
+              <li><button type="button" class="region-button" data-region="Iquique">Iquique</button></li>
+              <li><button type="button" class="region-button" data-region="Santiago">Santiago</button></li>
+              <li><button type="button" class="region-button" data-region="Valdivia">Valdivia</button></li>
+              <li><button type="button" class="region-button" data-region="Arica">Arica</button></li>
+              <li><button type="button" class="region-button" data-region="La Serena">La Serena</button></li>
+              <li><button type="button" class="region-button" data-region="Temuco">Temuco</button></li>
+              <li><button type="button" class="region-button" data-region="Concepción">Concepción</button></li>
+              <li><button type="button" class="region-button" data-region="Valparaíso">Valparaíso</button></li>
+              <li><button type="button" class="region-button" data-region="Talca">Talca</button></li>
+              <li><button type="button" class="region-button" data-region="Puerto Montt">Puerto Montt</button></li>
+              <li><button type="button" class="region-button" data-region="Rancagua">Rancagua</button></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <h3>Conoce nuestros servicios</h3>
+          <p>Descubre más sobre nuestros locales, horarios y políticas para una mejor experiencia.</p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="#locales">Locales y Horarios</a></li>
+              <li><a href="#">Centro de ayuda</a></li>
+              <li><a href="#">Quienes somos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Soporte</h4>
+            <ul>
+              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="terminos.html">Términos y Condiciones</a></li>
+              <li><a href="privacidad.html">Política de privacidad</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Síguenos en</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/wowsushi_delivery/?hl=es" target="_blank" rel="noopener noreferrer">Instagram: WowSushi</a></li>
+              <li><a href="https://www.facebook.com/QuieroWOW.cl/?locale=es_LA" target="_blank" rel="noopener noreferrer">Facebook: Wow Sushi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 WOW Sushi. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      const slides = document.querySelectorAll('.slider .slide');
+      const controls = document.querySelectorAll('.slider-controls button');
+      const slider = document.querySelector('.slider');
+      let currentIndex = 0;
+      let isDragging = false;
+      let dragStartX = 0;
+      const dragThreshold = 60;
+
+      function showSlide(index) {
+        currentIndex = index;
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+        controls.forEach((button, i) => button.classList.toggle('active', i === index));
+      }
+
+      setInterval(() => {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        showSlide(nextIndex);
+      }, 10000);
+
+      controls.forEach((button) => {
+        button.addEventListener('click', () => {
+          const index = Number(button.dataset.slide);
+          showSlide(index);
+        });
+      });
+
+      if (slider) {
+        slider.addEventListener('pointerdown', (event) => {
+          if (event.target.closest('.slider-controls button')) return;
+          isDragging = true;
+          dragStartX = event.clientX;
+          slider.setPointerCapture(event.pointerId);
+          slider.classList.add('is-dragging');
+        });
+
+        slider.addEventListener('pointermove', (event) => {
+          if (!isDragging) return;
+          event.preventDefault();
+        });
+
+        const endDrag = (event) => {
+          if (!isDragging) return;
+          isDragging = false;
+          slider.releasePointerCapture(event.pointerId);
+          slider.classList.remove('is-dragging');
+
+          const diff = event.clientX - dragStartX;
+          if (diff < -dragThreshold) {
+            if (currentIndex > 0) {
+              showSlide(currentIndex - 1);
+            }
+          } else if (diff > dragThreshold) {
+            if (currentIndex < slides.length - 1) {
+              showSlide(currentIndex + 1);
+            }
+          }
+        };
+
+        slider.addEventListener('pointerup', endDrag);
+        slider.addEventListener('pointercancel', endDrag);
+      }
+
+      const menuTabs = document.querySelectorAll('.menu-tab');
+      const menuPanels = document.querySelectorAll('.menu-panel');
+      const menuPreview = document.getElementById('menu-preview');
+      const menuActions = document.querySelectorAll('.menu-action');
+
+      function showMenuPanel(tabName) {
+        menuTabs.forEach((tab) => {
+          const isActive = tab.dataset.tab === tabName;
+          tab.classList.toggle('active', isActive);
+          tab.setAttribute('aria-selected', String(isActive));
+        });
+
+        menuPanels.forEach((panel) => {
+          panel.classList.toggle('active', panel.dataset.panel === tabName);
+        });
+      }
+
+      menuTabs.forEach((tab) => {
+        tab.addEventListener('click', () => showMenuPanel(tab.dataset.tab));
+      });
+
+      menuActions.forEach((button) => {
+        button.addEventListener('click', () => {
+          const label = button.previousElementSibling?.textContent || 'Plato seleccionado';
+          menuPreview.textContent = `Vista rápida: ${label}`;
+        });
+      });
+
+      const regionButtons = document.querySelectorAll('.region-button');
+      const mapPoints = document.querySelectorAll('.map-point');
+
+      function setActiveRegion(regionName) {
+        regionButtons.forEach((button) => {
+          button.classList.toggle('active', button.dataset.region === regionName);
+        });
+
+        mapPoints.forEach((point) => {
+          point.classList.toggle('active', point.dataset.region === regionName);
+        });
+      }
+
+      regionButtons.forEach((button) => {
+        button.addEventListener('click', () => setActiveRegion(button.dataset.region));
+      });
+
+      mapPoints.forEach((point) => {
+        point.addEventListener('click', () => setActiveRegion(point.dataset.region));
+      });
+    </script>
+  </body>
+</html>
